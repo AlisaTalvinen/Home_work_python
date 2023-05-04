@@ -27,4 +27,3 @@ total_cost = 0
 for letter in word:
     total_cost += cost_list[letter]
 print(f'Total cost is {total_cost}')
-
