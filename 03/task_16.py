@@ -7,4 +7,10 @@
 #     3
 #     -> 1
 
+from random import randint
 
+len_nums = int(input("Enter list's length: "))
+nums = [randint(1, 10) for i in range(len_nums)]
+print('List: ', *nums)
+x = int(input('Enter x: '))
+print(f'{x} finds in list {nums.count(x)} times')

@@ -6,3 +6,21 @@
 #     1 2 3 4 5
 #     6
 #     -> 5
+
+
+from random import randint
+
+len_nums = int(input("Enter list's length: "))
+nums = [randint(1, 10) for i in range(len_nums)]
+print('List: ', *nums)
+x = int(input('Enter x: '))
+print(f'{x} finds in list {nums.count(x)} times')
+
+min_diff = nums[0]
+for i in nums:
+    diff_current = abs(i - x)
+    if diff_current < min_diff:
+        res = i
+        min_diff = diff_current
+
+print(f'Closest element to an entered number is {res}')
